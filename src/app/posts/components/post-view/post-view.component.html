@@ -1,0 +1,7 @@
+<div class="container mt-4">
+    <app-post-form [formGroup]="postForm" [formEdit]="formEdit">
+        <button (click)="submit()" [hidden]="!formEdit" [disabled]="submitDisabled" class="btn btn-primary">Submit</button>
+        <button (click)="this.formEdit = true" [hidden]="formEdit" class="btn btn-primary">Edit</button>
+        <button (click)="this.formEdit = false" [hidden]="!formEdit" class="btn btn-primary">Cancel</button>
+    </app-post-form>
+</div>

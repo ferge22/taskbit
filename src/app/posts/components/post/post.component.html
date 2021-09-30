@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-center mt-3 mb-3">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="text-truncate card-title">{{ post.title }}</h5>
+            <p class="text-truncate card-text">{{ post.title }}</p>
+            <a [routerLink]="['/posts', post.id]" class="btn btn-primary">Read more</a>
+        </div>
+    </div>
+</div>

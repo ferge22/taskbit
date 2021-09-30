@@ -1,0 +1,22 @@
+<form [formGroup]="formGroup">
+    <div class="form-group">
+        <label for="title">Post title</label>
+        <input [readonly]="!formEdit" formControlName="title" type="text" class="form-control" id="title"
+            placeholder="Enter title" [class.is-invalid]="checkControlValidity('title')" />
+        <p *ngIf="checkControlValidity('title')" class="error">
+            Title is required
+        </p>
+    </div>
+    <div class="form-group">
+        <label for="body">Post body</label>
+        <textarea [readonly]="!formEdit" cols="20" rows="5" formControlName="body" type="text" class="form-control"
+            id="body" placeholder="Enter Body" [class.is-invalid]="checkControlValidity('body')">
+    </textarea>
+        <p *ngIf="checkControlValidity('body')" class="error">
+            Body is required
+        </p>
+    </div>
+    <div class="d-flex justify-content-between">
+        <ng-content></ng-content>
+    </div>
+</form>
